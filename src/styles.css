@@ -1,0 +1,64 @@
+#output{
+  display: none;
+}
+
+
+body {
+  font-family: fantasy;
+  text-align: center;
+  margin-top:2%;
+  /* background-image: url("./img/maze1.jpg"); */
+}
+
+.card {
+
+  font-family: fantasy;
+  background-color: grey;
+  height:125px;
+  font-size:80px;
+}
+
+.topbar {
+  font-size:20px;
+  color:white;
+  background-color: black;
+}
+
+.monstView {
+  color: lavender;
+  /* background-image: url("./img/dgbg.gif"); */
+  background-size: cover;
+  height:600px;
+}
+
+.redtext {
+  color:red;
+}
+
+.player {
+  color: lavender;
+  text-shadow: 2px 2px green;
+  height:150px;
+  font-size:30px;
+}
+
+.playercon {
+  font-size:30px;
+  height:100px;
+}
+#playercon0{
+  background-size: cover;
+  /* background-image: url("./img/sword.jpg"); */
+}
+
+.redborder {
+  border: 5px dashed red;
+}
+
+.greenborder {
+  border: 5px dotted green;
+}
+
+.yellowborder {
+  border: 5px dotted yellow;
+}
