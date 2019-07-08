@@ -63,18 +63,58 @@ function planetConst(milliage,planet) {
 }
 
 
+export function PlanetAgeTest(now, dob, planet) {
+  this.now = now;
+  this.dob = dob;
+  this.planet = planet;
+  this.milliage = now - dob;
+}
+
+PlanetAgeTest.prototype.aging = function() {
+  if (this.planet === "Mercury") {
+    return parseFloat(Math.round(this.milliage / mercuryYear).toFixed(2));
+  }
+  if (this.planet === "Venus") {
+    return parseFloat(Math.round(this.milliage / venusYear).toFixed(2));
+  }
+  if (this.planet === "Earth") {
+    return parseFloat(Math.round(this.milliage / earthYear).toFixed(2));
+  }
+  if (this.planet === "Mars") {
+    return parseFloat(Math.round(this.milliage / marsYear).toFixed(2));
+  }
+  if (this.planet === "Jupiter") {
+    return parseFloat(Math.round(this.milliage / jupiterYear).toFixed(2));
+  }
+  if (this.planet === "Saturn") {
+    return parseFloat(Math.round(this.milliage / saturnYear).toFixed(2));
+  }
+  if (this.planet === "Uranus") {
+    return parseFloat(Math.round(this.milliage / uranusYear).toFixed(2));
+  }
+  if (this.planet === "Neptune") {
+    return parseFloat(Math.round(this.milliage / neptuneYear).toFixed(2));
+  }
+}
+PlanetAgeTest.prototype.death = function() {
+  let lifeExp = 80 * earthYear;
+  if (lifeExp < this.milliage) {
+    console.log("you should be dead!");
+    return "You should be dead!";
+  } else {
+    return "You are alive@";
+  }
+}
+
+
 $(function(){
-
-
-$("#gal-page form").submit(function() {
-  event.preventDefault();
-  var planet = $("input:radio[name=planet]:checked").val();
-  let d = new Date(document.getElementById("born").value);
-  let millidob = d.getTime();
-  let millicurrent = Date.now();
-  let milliage = millicurrent - millidob;
-  planetConst(milliage,planet)
+  $("#gal-page form").submit(function() {
+    event.preventDefault();
+    let planet = $("input:radio[name=planet]:checked").val();
+    let d = new Date(document.getElementById("born").value);
+    let millidob = d.getTime();
+    let millicurrent = Date.now();
+    let milliage = millicurrent - millidob;
+    planetConst(milliage,planet)
   });
-
-
 });

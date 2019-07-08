@@ -13,7 +13,9 @@ _This web page is created for the fifth Friday project assigned to the students 
 * _clone repository off of Github_
 * _go to parent directory using terminal for Mac, git.bash for Windows_
 * _type in 'npm install' to install the proper webpacks_
-* _type in 'npm start build' to run the web page_
+* _type in 'npm run build' to create the web page_
+* _find ./dist/index.html to run the web page_
+* _You may type npm run start on OSX to run the web page as well_
 
 
 
